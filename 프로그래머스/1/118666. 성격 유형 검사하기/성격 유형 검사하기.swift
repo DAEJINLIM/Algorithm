@@ -13,10 +13,10 @@ func solution(_ survey:[String], _ choices:[Int]) -> String {
         }
     }
     
-    result.append(types["R"] == types["T"] ? "R" : types["R"]! > types["T"]! ? "R" : "T")
-    result.append(types["C"] == types["F"] ? "C" : types["C"]! > types["F"]! ? "C" : "F")
-    result.append(types["J"] == types["M"] ? "J" : types["J"]! > types["M"]! ? "J" : "M")
-    result.append(types["A"] == types["N"] ? "A" : types["A"]! > types["N"]! ? "A" : "N")
+    result.append(types["R"]! >= types["T"]! ? "R" : "T")
+    result.append(types["C"]! >= types["F"]! ? "C" : "F")
+    result.append(types["J"]! >= types["M"]! ? "J" : "M")
+    result.append(types["A"]! >= types["N"]! ? "A" : "N")
     
     return result
 }
