@@ -16,9 +16,7 @@ func solution(_ priorities:[Int], _ location:Int) -> Int {
         } else {
             queue.append(pop)
         }
-        if !queue.isEmpty {
-            loca -= 1
-        }
+        loca -= 1
         if loca < 0 {
             loca = queue.count - 1
         }
