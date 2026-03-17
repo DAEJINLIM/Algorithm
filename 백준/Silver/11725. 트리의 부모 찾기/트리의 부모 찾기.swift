@@ -14,20 +14,15 @@ for _ in 0..<n-1 {
     graph[b].append(a)
 }
 
-var queue = [1]
-var index = 0
-
-while index < queue.count {
-    let node = queue[index]
-    index += 1
-    
-    for next in graph[node] {
-        if parent[next] == 0 {
-            parent[next] = node
-            queue.append(next)
-        }
+func dfs(_ p: Int) {
+    for i in graph[p] {
+        if parent[i] != 0 { continue }
+        parent[i] = p
+        dfs(i)
     }
 }
+
+dfs(1)
 
 for i in 2...n {
     print(parent[i])
