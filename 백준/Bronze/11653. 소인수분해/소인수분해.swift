@@ -1,12 +1,15 @@
-import Foundation
-
 var n = Int(readLine()!)!
 
-if n > 1 {
-    for i in 2...n {
-        while n % i == 0 {
-            n /= i
-            print(i)
-        }
+var i = 2
+
+while i * i <= n {
+    while n % i == 0 {
+        print(i)
+        n /= i
     }
+    i += 1
+}
+
+if n > 1 {
+    print(n)
 }
