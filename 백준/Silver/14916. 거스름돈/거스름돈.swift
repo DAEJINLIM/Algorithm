@@ -1,22 +1,16 @@
-import Foundation
+let n = Int(readLine()!)!
 
-var n = Int(readLine()!)!
-var count = 0
-
-count += n / 5
-n = n % 5
-
-while true {
-    if n % 2 == 0 {
-        count += n / 2
-        print(count)
-        break
+if n == 1 || n == 3 {
+    print(-1)
+} else {
+    let count5 = n / 5
+    let remain = n % 5
+    
+    if remain == 0 {
+        print(count5)
+    } else if remain == 1 || remain == 3 {
+        print((count5 - 1) + (remain + 5) / 2)
     } else {
-        n += 5
-        count -= 1
-        if count < 0 {
-            print(-1)
-            break
-        }
+        print(count5 + remain / 2)
     }
 }
