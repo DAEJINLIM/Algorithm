@@ -1,7 +1,6 @@
 import Foundation
 
-let input = Int(readLine()!)!
-var n = input
+var n = Int(readLine()!)!
 var count = 0
 
 count += n / 5
